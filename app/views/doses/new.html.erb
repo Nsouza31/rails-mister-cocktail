@@ -1,0 +1,12 @@
+<h1 class='p-5'>New Dose</h1>
+<div class='p-5'>
+<%= simple_form_for [@cocktail,@dose] do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :description, label: "description"%>
+  <%= f.association :ingredient  %>
+
+  <%= f.button :submit, class: "btn-primary" %>
+  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary " %>
+  <%= link_to "Back", cocktails_path, class: 'btn btn-secondary' %>
+ </div>
+<% end %>
